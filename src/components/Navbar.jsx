@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
+import logoNoBackground from "../assets/logoNoBackground.svg";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import {  menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,7 +43,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          {/* <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+           */}
+           {/* <img src={require('./assets/logoNoBackground.svg').default} alt='logo' className='w-9 h-9 object-contain' /> */}
+           <img
+  src={logoNoBackground}
+  alt='logo'
+  className='w-9 h-9 object-contain'
+/>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             3D-Porfolio &nbsp;
             <span className='sm:block hidden'> | Sameer Verma</span>
